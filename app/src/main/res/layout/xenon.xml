@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        app:navigationIcon="@drawable/ic_back"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStart="0.0dip"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+  <net.suntrans.zhanshi.views.ScrollChildSwipeRefreshLayout
+     android:id="@+id/refreshlayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/bgColor"
+          android:fitsSystemWindows="true">
+
+          <LinearLayout
+              android:id="@+id/a"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="16dp"
+              android:orientation="vertical">
+
+              <LinearLayout
+                  android:visibility="gone"
+                  android:id="@+id/llDianyuan"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:background="?attr/selectableItemBackground"
+                  android:gravity="center_vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:gravity="center|left"
+                      android:text="电源:"
+                      android:textColor="@color/textColor"
+                      android:textSize="16sp" />
+
+
+                  <net.suntrans.zhanshi.views.SwitchButton
+                      android:id="@+id/dianyuan"
+                      style="@style/SwitchButtonStyleMD"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:textColor="@color/white"
+                      app:kswBackDrawable="@drawable/switch_bottom_white"
+                      app:kswTextOff="OFF"
+                      app:kswTextOn="ON"
+                      app:kswThumbDrawable="@drawable/thumb" />
+              </LinearLayout>
+
+              <!--<View-->
+              <!--android:layout_width="match_parent"-->
+              <!--android:layout_height="2dp"-->
+              <!--android:background="#888888" />-->
+
+              <LinearLayout
+                  android:id="@+id/llXianqideng"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:background="?attr/selectableItemBackground"
+                  android:gravity="center_vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:gravity="center_vertical"
+                      android:text="氙气灯开关:"
+                      android:textColor="@color/textColor" />
+
+                  <net.suntrans.zhanshi.views.SwitchButton
+                      android:id="@+id/xianqideng"
+                      style="@style/SwitchButtonStyleMD"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:textColor="@color/white"
+                      app:kswBackDrawable="@drawable/switch_bottom_white"
+                      app:kswTextOff="OFF"
+                      app:kswTextOn="ON"
+                      app:kswThumbDrawable="@drawable/thumb" />
+
+
+              </LinearLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="#888888" />
+
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/b"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_below="@id/a"
+              android:layout_marginLeft="16dp"
+              android:orientation="horizontal">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="50dp"
+                  android:gravity="center_vertical"
+                  android:text="调光等级::"
+                  android:textColor="@color/textColor" />
+
+              <TextView
+                  android:layout_marginLeft="8dp"
+                  android:id="@+id/grade"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center|left"
+                  android:text="5"
+                  android:textColor="#444444"
+                  android:textSize="16sp" />
+          </LinearLayout>
+
+
+          <net.suntrans.zhanshi.views.GradeBar
+              android:id="@+id/bar"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/b"
+              android:layout_marginLeft="50dp"
+              android:layout_marginRight="50dp"
+              app:gradeNumber="8" />
+      </RelativeLayout>
+
+  </net.suntrans.zhanshi.views.ScrollChildSwipeRefreshLayout>
+</LinearLayout>
+
+

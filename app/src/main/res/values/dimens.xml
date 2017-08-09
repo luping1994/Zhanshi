@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_tab_height">55dp</dimen>
+    <dimen name="textNormalSize">16sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="eleitem_textmargin">40dp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="spacing_nano">2dp</dimen>
+    <dimen name="size_avatar_toolbar">40dp</dimen>
+    <dimen name="spacing_double">16dp</dimen>
+</resources>
